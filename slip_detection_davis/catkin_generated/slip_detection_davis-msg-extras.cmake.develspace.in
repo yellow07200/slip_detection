@@ -1,0 +1,2 @@
+set(slip_detection_davis_MESSAGE_FILES "/home/user/catkin_ws/src/slip_detection_davis/msg/SlipDetectionDataComplete_analysis_final3.msg;/home/user/catkin_ws/src/slip_detection_davis/msg/SlipDetectionDataComplete_analysis_final4.msg;/home/user/catkin_ws/src/slip_detection_davis/msg/CompressiveForceGrasp_stable_Final.msg")
+set(slip_detection_davis_SERVICE_FILES "/home/user/catkin_ws/src/slip_detection_davis/srv/object_test.srv")

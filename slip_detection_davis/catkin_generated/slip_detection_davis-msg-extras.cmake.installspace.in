@@ -1,0 +1,2 @@
+set(slip_detection_davis_MESSAGE_FILES "msg/SlipDetectionDataComplete_analysis_final3.msg;msg/SlipDetectionDataComplete_analysis_final4.msg;msg/CompressiveForceGrasp_stable_Final.msg")
+set(slip_detection_davis_SERVICE_FILES "srv/object_test.srv")

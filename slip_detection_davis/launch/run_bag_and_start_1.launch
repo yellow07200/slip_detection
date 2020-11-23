@@ -1,0 +1,17 @@
+<launch>
+  <!-- feature detector -->
+  <node name="experiment_node_detect" pkg="slip_detection_davis" type="experiment_node" output="screen">
+
+<param name="feature_type" value="harris"/>
+<param name="harris_min" value="-0.1" />
+<param name="harris_max" value="6.0" />
+  </node>
+
+
+
+  
+
+  <!-- display -->
+  <node name="rqt_gui_corners" pkg="rqt_gui" type="rqt_gui" args="--perspective-file $(find slip_detection_davis)/cfg/soft_exp.perspective" />
+
+</launch>

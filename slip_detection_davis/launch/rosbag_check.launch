@@ -1,0 +1,9 @@
+<launch>
+  <!-- feature detector -->
+  <node name="experiment_node_detect" pkg="slip_detection_davis" type="experiment_node" output="screen">
+  </node>
+
+<node pkg="rosbag" type="play" name="player" output="screen" args="--clock /home/user/catkin_ws/bagFiles/7_1_whole_data/only-900-DVS.bag"/>
+  
+<node pkg="rosbag" type="record" name="harness_bag" args="-o 900_1_tune_1.bag /slip_complete_data /robot/end_effector/left_gripper/stat /transformed_world /dvs/events /dvs/camera_info"/>
+</launch>

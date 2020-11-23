@@ -1,0 +1,14 @@
+<launch>
+  <!-- camera driver -->
+  <node name="netft_node" pkg="netft_utils" type="netft_node" respawn="false" output="screen" args="192.168.1.40"/>
+
+ <node pkg="tf2_ros" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 world ft" />
+ <node name="netft_utils" pkg="netft_utils" type="netft_utils" respawn="false" output="screen" args="world ft"/>
+ <node pkg="rosservice" type="rosservice" name="bias" args="call --wait /bias true 20 10"/> 
+  <node name="davis_ros_driver" pkg="davis_ros_driver" type="davis_ros_driver">
+    <rosparam command="load" file="$(find davis_ros_driver)/config/indoors.yaml" />
+  </node>
+
+  <include file="$(find slip_detection_davis)/launch/run_bag_and_start.launch" />
+
+</launch>
